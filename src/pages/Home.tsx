@@ -135,7 +135,7 @@ export default function Home() {
           {/* Right — code-rain portrait */}
           <Reveal delay={0.35} x={40} y={0}>
             <MatrixPortrait
-              src="/profile.jpg"
+              src={`${import.meta.env.BASE_URL}profile.jpg`}
               alt="Mian Mamoon Shah portrait"
               className="mx-auto w-full max-w-100 lg:max-w-none"
             />

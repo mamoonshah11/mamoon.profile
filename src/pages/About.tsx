@@ -107,7 +107,7 @@ export default function About() {
           {/* Right — portrait + timeline */}
           <div className="flex flex-col gap-10">
             <MatrixPortrait
-              src="/profile.jpg"
+              src={`${import.meta.env.BASE_URL}profile.jpg`}
               alt="Mian Mamoon Shah portrait"
               className="mx-auto w-full max-w-sm"
             />
