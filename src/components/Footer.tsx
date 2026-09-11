@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { ArrowUp } from 'lucide-react'
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { SiVercel } from 'react-icons/si'
-import logo from '../assets/logo.png' // Adjust path depending on your component directory
+
 
 
 const SOCIALS = [
