@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { Menu, X, ArrowUpRight } from 'lucide-react'
+import logo from '../assets/logo.png' // Adjust path depending on your component directory
 
 const NAV_LINKS = [
   { label: 'Home', to: '/' },
@@ -43,9 +44,20 @@ export default function Navbar() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 md:px-12">
         <Link to="/" className="group flex items-center gap-3">
-          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-mint font-display text-lg font-bold text-ink transition-transform duration-300 group-hover:rotate-6">
-            M
-          </span>
+          {/* Logo badge with high-contrast background */}
+        <div 
+  className="flex items-center justify-center rounded-xl px-2.5 py-1.5 border border-teal-400 shadow-[0_0_15px_rgba(20,184,166,0.35)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_0_20px_rgba(20,184,166,0.55)]"
+  style={{
+    background: 'radial-gradient(circle, #FFFFFF 40%, #E6FAF7 100%)',
+  }}
+>
+  <img
+    src={logo}
+    alt="NOVAM LAB Logo"
+    className="h-7 w-auto object-contain transition-transform duration-300 group-hover:rotate-3"
+  />
+</div>
+
           <span className="hidden font-display text-sm font-semibold uppercase tracking-widest text-cloud sm:block">
             Mamoon<span className="text-mint">.dev</span>
           </span>

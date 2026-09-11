@@ -2,6 +2,9 @@ import { Award, GraduationCap, MapPin, FlaskConical, Globe, Users } from 'lucide
 import Reveal from '../components/Reveal'
 import PageHeader from '../components/PageHeader'
 import MatrixPortrait from '../components/MatrixPortrait'
+import logo from '../assets/logo.png' // Adjust path depending on your component directory
+
+
 
 const TIMELINE = [
   {
@@ -114,86 +117,97 @@ export default function About() {
           </div>
         </div>
 
-        {/* NOVAM LAB */}
-        <div className="mt-20">
-          <Reveal delay={0.1}>
-            <div className="mb-8 flex items-center gap-3">
-              <FlaskConical className="h-5 w-5 text-mint" />
-              <span className="font-display text-sm font-semibold uppercase tracking-[0.25em] text-cloud">
-                Company
-              </span>
-            </div>
-          </Reveal>
+       {/* NOVAM LAB */}
+<div className="mt-20">
+  <Reveal delay={0.1}>
+    <div className="mb-8 flex items-center gap-3">
+      <FlaskConical className="h-5 w-5 text-mint" />
+      <span className="font-display text-sm font-semibold uppercase tracking-[0.25em] text-cloud">
+        Company
+      </span>
+    </div>
+  </Reveal>
 
-          <Reveal delay={0.15} y={24}>
-            <div
-              className="relative overflow-hidden rounded-3xl p-8 sm:p-10"
-              style={{
-                background:
-                  'linear-gradient(135deg, rgba(22,33,27,0.7), rgba(9,14,11,0.7))',
-                border: '1px solid rgba(180,220,200,0.12)',
-              }}
-            >
-              <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-mint/8 blur-[100px]" />
-              <div className="relative">
-                <div className="flex items-center gap-4">
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-mint/25 bg-mint/10">
-                    <FlaskConical className="h-6 w-6 text-mint" />
-                  </div>
-                  <div>
-                    <h3 className="font-display text-2xl font-bold text-cloud sm:text-3xl">
-                      NOVAM LAB
-                    </h3>
-                    <span className="text-sm text-fog">Technology & Innovation</span>
-                  </div>
-                </div>
+  <Reveal delay={0.15} y={24}>
+    <div
+      className="relative overflow-hidden rounded-3xl p-8 sm:p-10"
+      style={{
+        background:
+          'linear-gradient(135deg, rgba(22,33,27,0.7), rgba(9,14,11,0.7))',
+        border: '1px solid rgba(180,220,200,0.12)',
+      }}
+    >
+      <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-mint/8 blur-[100px]" />
+      <div className="relative">
+        <div className="flex items-center gap-4">
+          
+          {/* Logo Badge with Light Radial Glow */}
+          <div 
+            className="flex h-14 shrink-0 items-center justify-center rounded-2xl px-3.5 py-2 border-2 border-teal-400 shadow-[0_0_20px_rgba(20,184,166,0.35)]"
+            style={{
+              background: 'radial-gradient(circle, #FFFFFF 40%, #E6FAF7 100%)',
+            }}
+          >
+            <img 
+              src={logo} 
+              alt="NOVAM LAB Logo" 
+              className="h-8 w-auto object-contain" 
+            />
+          </div>
 
-                <p className="mt-6 max-w-2xl text-sm text-fog leading-relaxed sm:text-base">
-                  A technology lab focused on building innovative web solutions,
-                  experimental tools and digital products. From concept to deployment
-                  — shipping software that pushes boundaries.
-                </p>
-
-                <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                  <div className="flex items-start gap-3 rounded-xl border border-white/5 bg-white/2 p-4">
-                    <Globe className="mt-0.5 h-4 w-4 shrink-0 text-mint" />
-                    <div>
-                      <div className="font-display text-sm font-semibold text-cloud">
-                        Web Solutions
-                      </div>
-                      <div className="mt-1 text-xs text-fog">
-                        Full-stack apps, SaaS platforms and digital tools.
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3 rounded-xl border border-white/5 bg-white/2 p-4">
-                    <FlaskConical className="mt-0.5 h-4 w-4 shrink-0 text-mint" />
-                    <div>
-                      <div className="font-display text-sm font-semibold text-cloud">
-                        R&D
-                      </div>
-                      <div className="mt-1 text-xs text-fog">
-                        Experimental projects and emerging tech exploration.
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3 rounded-xl border border-white/5 bg-white/2 p-4">
-                    <Users className="mt-0.5 h-4 w-4 shrink-0 text-mint" />
-                    <div>
-                      <div className="font-display text-sm font-semibold text-cloud">
-                        Consulting
-                      </div>
-                      <div className="mt-1 text-xs text-fog">
-                        Tech strategy and product development for clients.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Reveal>
+          <div>
+            <h3 className="font-display text-2xl font-bold text-cloud sm:text-3xl">
+              NOVAM LAB
+            </h3>
+            <span className="text-sm text-fog">Technology & Innovation</span>
+          </div>
         </div>
 
+        <p className="mt-6 max-w-2xl text-sm text-fog leading-relaxed sm:text-base">
+          A technology lab focused on building innovative web solutions,
+          experimental tools and digital products. From concept to deployment
+          — shipping software that pushes boundaries.
+        </p>
+
+        <div className="mt-8 grid gap-4 sm:grid-cols-3">
+          <div className="flex items-start gap-3 rounded-xl border border-white/5 bg-white/2 p-4">
+            <Globe className="mt-0.5 h-4 w-4 shrink-0 text-mint" />
+            <div>
+              <div className="font-display text-sm font-semibold text-cloud">
+                Web Solutions
+              </div>
+              <div className="mt-1 text-xs text-fog">
+                Full-stack apps, SaaS platforms and digital tools.
+              </div>
+            </div>
+          </div>
+          <div className="flex items-start gap-3 rounded-xl border border-white/5 bg-white/2 p-4">
+            <FlaskConical className="mt-0.5 h-4 w-4 shrink-0 text-mint" />
+            <div>
+              <div className="font-display text-sm font-semibold text-cloud">
+                R&D
+              </div>
+              <div className="mt-1 text-xs text-fog">
+                Experimental projects and emerging tech exploration.
+              </div>
+            </div>
+          </div>
+          <div className="flex items-start gap-3 rounded-xl border border-white/5 bg-white/2 p-4">
+            <Users className="mt-0.5 h-4 w-4 shrink-0 text-mint" />
+            <div>
+              <div className="font-display text-sm font-semibold text-cloud">
+                Consulting
+              </div>
+              <div className="mt-1 text-xs text-fog">
+                Tech strategy and product development for clients.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Reveal>
+</div>
         {/* Timeline */}
         <div className="mt-20">
           <Reveal delay={0.1}>

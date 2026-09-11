@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
-import { ArrowDown, ArrowUpRight, MapPin, Rocket } from 'lucide-react'
+import { ArrowDown, ArrowUpRight, MapPin,  } from 'lucide-react'
 import Reveal from '../components/Reveal'
 import Ticker from '../components/Ticker'
 import MatrixPortrait from '../components/MatrixPortrait'
+import logo from '../assets/logo.png' // Adjust path depending on your component directory
+
 
 const STATS = [
   { value: '2028', label: 'BS CS abroad' },
@@ -145,48 +147,60 @@ export default function Home() {
 
       <Ticker />
 
-      {/* ScaleUp Digital Services */}
-      <section className="mx-auto max-w-7xl px-5 pt-16 sm:px-8 md:px-12">
-        <Reveal y={20}>
-          <div
-            className="relative overflow-hidden rounded-3xl p-8 sm:p-10"
-            style={{
-              background:
-                'linear-gradient(135deg, rgba(2,44,34,0.6), rgba(6,95,70,0.3), rgba(9,14,11,0.7))',
-              border: '1px solid rgba(52,211,153,0.15)',
-            }}
-          >
-            <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-mint/10 blur-[100px]" />
-            <div className="relative flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-10">
-              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-mint/25 bg-mint/10">
-                <Rocket className="h-7 w-7 text-mint" />
-              </div>
-              <div className="flex-1">
-                <div className="mb-1 flex items-center gap-3">
-                  <h3 className="font-display text-xl font-bold text-cloud sm:text-2xl">
-                     NOVAM Lab
-                  </h3>
-                  <span className="rounded-full border border-mint/30 bg-mint/10 px-3 py-0.5 text-[10px] uppercase tracking-[0.2em] text-mint-soft">
-                    My Firm
-                  </span>
-                </div>
-                <p className="mt-2 max-w-xl text-sm text-fog leading-relaxed sm:text-base">
-                  A digital services brand I founded — focused on high-converting
-                  landing pages, CRO audits and revenue-focused web applications.
-                  Where code meets conversion.
-                </p>
-              </div>
-              <Link
-                to="/services"
-                className="inline-flex shrink-0 items-center gap-2 rounded-full border border-cloud/20 px-6 py-3 font-display text-xs font-semibold uppercase tracking-widest text-cloud transition-all duration-300 hover:border-mint/60 hover:text-mint hover:-translate-y-0.5"
-              >
-                Our Services
-                <ArrowUpRight className="h-4 w-4" />
-              </Link>
-            </div>
+    {/* NOVAM lab */}
+<section className="mx-auto max-w-7xl px-5 pt-16 sm:px-8 md:px-12">
+  <Reveal y={20}>
+    <div
+      className="relative overflow-hidden rounded-3xl p-8 sm:p-10"
+      style={{
+        background:
+          'linear-gradient(135deg, rgba(2,44,34,0.6), rgba(6,95,70,0.3), rgba(9,14,11,0.7))',
+        border: '1px solid rgba(52,211,153,0.15)',
+      }}
+    >
+      <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-mint/10 blur-[100px]" />
+      <div className="relative flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-10">
+        
+        {/* High-Contrast Logo Badge */}
+        <div 
+  className="flex h-16 shrink-0 items-center justify-center rounded-2xl px-4 py-2.5 border-2 border-teal-400 shadow-[0_0_20px_rgba(20,184,166,0.35)] transition-all duration-300"
+  style={{
+    background: 'radial-gradient(circle, #FFFFFF 40%, #E6FAF7 100%)',
+  }}
+>
+  <img 
+    src={logo} 
+    alt="NOVAM Lab Logo" 
+    className="h-9 w-auto object-contain" 
+  />
+</div>
+        <div className="flex-1">
+          <div className="mb-1 flex items-center gap-3">
+            <h3 className="font-display text-xl font-bold text-cloud sm:text-2xl">
+              NOVAM Lab
+            </h3>
+            <span className="rounded-full border border-mint/30 bg-mint/10 px-3 py-0.5 text-[10px] uppercase tracking-[0.2em] text-mint-soft">
+              My Firm
+            </span>
           </div>
-        </Reveal>
-      </section>
+          <p className="mt-2 max-w-xl text-sm text-fog leading-relaxed sm:text-base">
+            A digital services brand I founded — focused on high-converting
+            landing pages, CRO audits and revenue-focused web applications.
+            Where code meets conversion.
+          </p>
+        </div>
+
+        <Link
+          to="/services"
+          className="inline-flex shrink-0 items-center gap-2 rounded-full border border-cloud/20 px-6 py-3 font-display text-xs font-semibold uppercase tracking-widest text-cloud transition-all duration-300 hover:border-mint/60 hover:text-mint hover:-translate-y-0.5"
+        >
+          Our Services
+          <ArrowUpRight className="h-4 w-4" />
+        </Link>
+      </div>
+    </div>
+  </Reveal>
+</section>
 
       {/* Explore */}
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 md:px-12 sm:py-28">
